@@ -1,10 +1,9 @@
 from rplidar import RPLidar
 
-# Set the correct port for your RPLIDAR (e.g., '/dev/ttyUSB0' or '/dev/ttyS0' for UART)
-PORT_NAME = '/dev/ttyUSB0'
+PORT_NAME = '/dev/ttyUSB0'  # Adjust if necessary
+BAUDRATE = 256000  # Use 256000 for RPLIDAR A3
 
-# Initialize the LIDAR
-lidar = RPLidar(PORT_NAME)
+lidar = RPLidar(PORT_NAME, baudrate=BAUDRATE)
 
 try:
     print("Starting LIDAR scan...")
